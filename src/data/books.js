@@ -1,32 +1,9 @@
-import wingsOfFire from '/wof.webp'
-import alchemist from '/alchemist.jpg'
-import gggtm from '/gggtm.jpg'
-import ikigai from '/ikigai.jpg'
-import asGoodAsDead from '/asgood.jpg'
-import ggbb from '/ggbb.webp'
-import gandhi from '/gandhi.jpg'
-import fault from '/fault.jpg'
-import little from '/little.jpg'
-import breath from '/breath.jpeg'
-import villanelle from '/villianelle.jpg'
-import goneGirl from '/goneGirl.png' 
-import kevin from '/kevin.jpg'
-import sharp from '/sharp.jpg'
-import hardcastle from '/hardcastle.jpg'
-import gothic from '/gothic.jpeg'
-import silentPatient from '/silentpatient.jpg'
-import closedDoors from '/closeddoors.jpeg'
-import window from '/window.jpg'
-import cerulean from '/cerulean.jpeg'
-import legends from '/legends.jpg'
-import beachRead from '/beachread.jpg'
-
 export const reviews = [
   {
     id: 1,
     title: 'Wings of Fire',
     author: 'A.P.J. Abdul Kalam',
-    coverImage: wingsOfFire,
+    coverImage: '/wof.webp',
     rating: 5,
     genre: 'Autobiography',
     tags: ['inspiring', 'science', 'india', 'resilience'],
@@ -39,7 +16,7 @@ export const reviews = [
     id: 2,
     title: 'The Alchemist',
     author: 'Paulo Coelho',
-    coverImage: alchemist,
+    coverImage: '/alchemist.jpg',
     rating: 4,
     genre: 'Philosophical Fiction',
     tags: ['destiny', 'journey', 'spirituality', 'fable', 'self-discovery'],
@@ -52,7 +29,7 @@ export const reviews = [
     id: 3,
     title: 'A Good Girls Guide to Murder',
     author: 'Holly Jackson',
-    coverImage: gggtm,
+    coverImage: '/gggtm.jpg',
     rating: 5,
     genre: 'Thriller',
     tags: ['twists', 'gripping', 'dark'],
@@ -65,7 +42,7 @@ export const reviews = [
     id: 4,
     title: 'Good Girl Bad Blood',
     author: 'Holly Jackson',
-    coverImage: ggbb,
+    coverImage: '/ggbb.webp',
     rating: 4,
     genre: 'Thriller',
     tags: ['sequel', 'slow burn', 'dark'],
@@ -78,7 +55,7 @@ export const reviews = [
     id: 5,
     title: 'My Experiments with Truth',
     author: 'Mahatma Gandhi',
-    coverImage: gandhi,
+    coverImage: '/gandhi.jpg',
     rating: 4,
     genre: 'Autobiography',
     tags: ['philosophy', 'nonviolence', 'india', 'truth', 'self-discipline'],
@@ -94,7 +71,7 @@ export const currentlyReading = [
     id: 1,
     title: 'As Good As Dead',
     author: 'Holly Jackson',
-    coverImage: asGoodAsDead,
+    coverImage: '/asgood.jpg',
     progress: 35,
     startedDate: 'March 18, 2026',
     hyped: true,
@@ -105,7 +82,7 @@ export const currentlyReading = [
     id: 2,
     title: 'Ikigai',
     author: 'Héctor García & Francesc Miralles',
-    coverImage: ikigai,
+    coverImage: '/ikigai.jpg',
     progress: 60,
     startedDate: 'March 10, 2026',
     hyped: true,
@@ -122,9 +99,9 @@ export const moodRecs = [
     color: '#FFC2D9',
     description: 'Books that will wreck you beautifully.',
     books: [
-      { title: 'The Fault in Our Stars', author: 'John Green', coverImage: fault },
-      { title: 'A Little Life', author: 'Hanya Yanagihara', coverImage: little },
-      { title: 'When Breath Becomes Air', author: 'Paul Kalanithi', coverImage: breath },
+      { title: 'The Fault in Our Stars', author: 'John Green', coverImage: '/fault.jpg' },
+      { title: 'A Little Life', author: 'Hanya Yanagihara', coverImage: '/little.jpg' },
+      { title: 'When Breath Becomes Air', author: 'Paul Kalanithi', coverImage: '/breath.jpeg' },
     ],
   },
   {
@@ -134,9 +111,9 @@ export const moodRecs = [
     color: '#E8D4FF',
     description: 'Morally grey characters doing morally grey things.',
     books: [
-      { title: 'Killing Eve: Codename Villanelle', author: 'Luke Jennings', coverImage: villanelle },
-      { title: 'Gone Girl', author: 'Gillian Flynn', coverImage: goneGirl },
-      { title: 'We Need to Talk About Kevin', author: 'Lionel Shriver', coverImage: kevin },
+      { title: 'Killing Eve: Codename Villanelle', author: 'Luke Jennings', coverImage: '/villianelle.jpg' },
+      { title: 'Gone Girl', author: 'Gillian Flynn', coverImage: '/goneGirl.png' },
+      { title: 'We Need to Talk About Kevin', author: 'Lionel Shriver', coverImage: '/kevin.jpg' },
     ],
   },
   {
@@ -146,9 +123,9 @@ export const moodRecs = [
     color: '#FFD966',
     description: 'Unpredictable reads that go completely off the rails.',
     books: [
-      { title: 'Sharp Objects', author: 'Gillian Flynn', coverImage: sharp },
-      { title: 'The Seven Deaths of Evelyn Hardcastle', author: 'Stuart Turton', coverImage: hardcastle },
-      { title: 'Mexican Gothic', author: 'Silvia Moreno-Garcia', coverImage: gothic },
+      { title: 'Sharp Objects', author: 'Gillian Flynn', coverImage: '/sharp.jpg' },
+      { title: 'The Seven Deaths of Evelyn Hardcastle', author: 'Stuart Turton', coverImage: '/hardcastle.jpg' },
+      { title: 'Mexican Gothic', author: 'Silvia Moreno-Garcia', coverImage: '/gothic.jpeg' },
     ],
   },
   {
@@ -158,9 +135,9 @@ export const moodRecs = [
     color: '#C8FFE8',
     description: "Books that'll keep you up anyway.",
     books: [
-      { title: 'The Silent Patient', author: 'Alex Michaelides', coverImage: silentPatient },
-      { title: 'Behind Closed Doors', author: 'B.A. Paris', coverImage: closedDoors },
-      { title: 'The Woman in the Window', author: 'A.J. Finn', coverImage: window },
+      { title: 'The Silent Patient', author: 'Alex Michaelides', coverImage: '/silentpatient.jpg' },
+      { title: 'Behind Closed Doors', author: 'B.A. Paris', coverImage: '/closeddoors.jpeg' },
+      { title: 'The Woman in the Window', author: 'A.J. Finn', coverImage: '/window.jpg' },
     ],
   },
   {
@@ -170,9 +147,9 @@ export const moodRecs = [
     color: '#FFC2D9',
     description: 'Curl up and disappear for a few hours.',
     books: [
-      { title: 'The House in the Cerulean Sea', author: 'TJ Klune', coverImage: cerulean },
-      { title: 'Legends & Lattes', author: 'Travis Baldree', coverImage: legends },
-      { title: 'Beach Read', author: 'Emily Henry', coverImage: beachRead },
+      { title: 'The House in the Cerulean Sea', author: 'TJ Klune', coverImage: '/cerulean.jpeg' },
+      { title: 'Legends & Lattes', author: 'Travis Baldree', coverImage: '/legends.jpg' },
+      { title: 'Beach Read', author: 'Emily Henry', coverImage: '/beachread.jpg' },
     ],
   },
 ]
