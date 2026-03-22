@@ -7,7 +7,6 @@
   min-height: 260px;
 }
 
-/* LEFT: cover — portrait style like currently reading */
 .cover {
   width: 140px;
   flex-shrink: 0;
@@ -47,7 +46,7 @@
   text-align: center;
 }
 
-/* RIGHT: body */
+
 .body {
   padding: 18px 20px;
   display: flex;
@@ -114,7 +113,7 @@
   margin: 2px 0;
 }
 
-/* Verdict — mirrors "MID-READ THOUGHTS" block */
+
 .verdictBlock {
   display: flex;
   flex-direction: column;
