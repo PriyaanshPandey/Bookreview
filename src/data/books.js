@@ -29,7 +29,7 @@ export const reviews = [
     id: 3,
     title: 'A Good Girls Guide to Murder',
     author: 'Holly Jackson',
-    coverImage: '/gggtm.jpg',
+    coverImage: '/gggtm.jpeg',
     rating: 5,
     genre: 'Thriller',
     tags: ['twists', 'gripping', 'dark'],
