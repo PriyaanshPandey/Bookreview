@@ -5,7 +5,7 @@ import styles from './ReviewsCarousel.module.css'
 export default function ReviewsCarousel({ books }) {
   const [index, setIndex] = useState(0)
   const total = books.length
-  const VISIBLE = 2 // cards shown at once
+  const VISIBLE = 2 
 
   const canPrev = index > 0
   const canNext = index + VISIBLE < total
