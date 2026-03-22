@@ -1,14 +1,13 @@
-/* ── Shell ──────────────────────────────────────────── */
+
 .hero {
   position: relative;
   padding: 72px 24px 56px;
   overflow: hidden;
-  /* Cursor must be default so glow is invisible but tracked */
+
   cursor: default;
 }
 
-/* ── Grain overlay ──────────────────────────────────── */
-/* Pure CSS SVG noise — no external file needed */
+
 .grain {
   position: absolute;
   inset: 0;
@@ -20,7 +19,6 @@
   background-repeat: repeat;
 }
 
-/* ── Cursor glow ────────────────────────────────────── */
 .cursorGlow {
   position: absolute;
   top:    0;
@@ -34,17 +32,15 @@
     rgba(255, 111, 168, 0.06) 50%,
     transparent 70%
   );
-  transform: translate(-160px, -160px); /* start offscreen */
-  margin-left:  -160px;
-  margin-top:   -160px;
+  transform: translate(-160px, -160px);
+ 
   pointer-events: none;
   z-index: 2;
   opacity: 0;
   transition: opacity 0.4s ease;
-  /* No transition on transform — needs to feel instant */
+
 }
 
-/* ── Floating books ─────────────────────────────────── */
 .floatingLayer {
   position: absolute;
   inset: 0;
@@ -66,7 +62,7 @@
   100% { transform: translateY(-18px) rotate(4deg);  opacity: 0.1;  }
 }
 
-/* ── Content — sits above all layers ───────────────── */
+
 .inner {
   position: relative;
   z-index: 10;
@@ -140,7 +136,7 @@
   box-shadow: 4px 4px 0 var(--shadow);
   min-width: 80px;
   text-align: center;
-  /* Glass shimmer on hover */
+  
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
@@ -182,7 +178,7 @@
   color: var(--pink-hot);
   opacity: 0.5;
   transform: rotate(12deg);
-  /* Slowly rotates on loop */
+
   animation: stampSpin 20s linear infinite;
 }
 
