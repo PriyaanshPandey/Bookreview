@@ -82,7 +82,7 @@ export const currentlyReading = [
     id: 2,
     title: 'Ikigai',
     author: 'Héctor García & Francesc Miralles',
-    coverImage: '/ikigai.jpg',
+    coverImage: '/Ikigai.jpg',
     progress: 60,
     startedDate: 'March 10, 2026',
     hyped: true,
@@ -135,8 +135,8 @@ export const moodRecs = [
     color: '#C8FFE8',
     description: "Books that'll keep you up anyway.",
     books: [
-      { title: 'The Silent Patient', author: 'Alex Michaelides', coverImage: '/silentpatient.jpg' },
-      { title: 'Behind Closed Doors', author: 'B.A. Paris', coverImage: '/closeddoors.jpeg' },
+      { title: 'The Silent Patient', author: 'Alex Michaelides', coverImage: '/silentPatient.jpg' },
+      { title: 'Behind Closed Doors', author: 'B.A. Paris', coverImage: '/closedDoors.jpeg' },
       { title: 'The Woman in the Window', author: 'A.J. Finn', coverImage: '/window.jpg' },
     ],
   },
@@ -149,7 +149,7 @@ export const moodRecs = [
     books: [
       { title: 'The House in the Cerulean Sea', author: 'TJ Klune', coverImage: '/cerulean.jpeg' },
       { title: 'Legends & Lattes', author: 'Travis Baldree', coverImage: '/legends.jpg' },
-      { title: 'Beach Read', author: 'Emily Henry', coverImage: '/beachread.jpg' },
+      { title: 'Beach Read', author: 'Emily Henry', coverImage: '/beachRead.jpg' },
     ],
   },
 ]
