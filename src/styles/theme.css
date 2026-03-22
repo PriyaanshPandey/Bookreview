@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
 
-/* ── Light ──────────────────────────────────────────── */
 [data-theme='light'] {
   --bg-page:        #FFF0F5;
   --bg-card:        #FFFFFF;
@@ -20,46 +19,30 @@
   --accent-crimson: #E8437A;
   --dot-color:      #e8b4c8;
   --nav-height:     64px;
-
   --glow-text:      none;
   --glow-heading:   none;
   --glow-pink:      none;
 }
 
-/* ── Dark — Deep Wine Edition ───────────────────────── */
 [data-theme='dark'] {
-  /* Backgrounds — deep wine, not black */
-  --bg-page:        #1C0A14;   /* deep burgundy-black       */
-  --bg-card:        #2B1020;   /* dark wine                 */
-  --bg-card-alt:    #3D1830;   /* mid wine                  */
-  --bg-nav:         #160810;   /* near-black wine           */
-
-  /* Text — warm not cold */
-  --text-primary:   #F2D4E0;   /* warm parchment rose       */
-  --text-secondary: #C49AAE;   /* muted dusty rose          */
-  --text-muted:     #7A4D60;   /* dim mauve                 */
-
-  /* Borders & shadows — wine-toned not pink */
-  --border:         #8B3A5A;   /* muted wine border         */
-  --shadow:         #5C1A35;   /* deep wine shadow          */
-
-  /* Pink — dialed back to muted rose */
-  --pink-hot:       #D4567E;   /* muted rose, not neon      */
-  --pink-blush:     #3A1828;   /* very dark blush           */
-  --pink-petal:     #1C0A14;   /* matches bg                */
-
-  /* Accents — slightly desaturated */
+  --bg-page:        #1C0A14;
+  --bg-card:        #2B1020;
+  --bg-card-alt:    #3D1830;
+  --bg-nav:         #160810;
+  --text-primary:   #F2D4E0;
+  --text-secondary: #C49AAE;
+  --text-muted:     #7A4D60;
+  --border:         #8B3A5A;
+  --shadow:         #5C1A35;
+  --pink-hot:       #D4567E;
+  --pink-blush:     #3A1828;
+  --pink-petal:     #1C0A14;
   --accent-grape:   #9B5FCC;
-  --accent-yellow:  #C9A84C;   /* warm gold, not bright     */
+  --accent-yellow:  #C9A84C;
   --accent-mint:    #2FA882;
   --accent-crimson: #C23D6A;
-
-  /* Dot grid — barely visible wine */
   --dot-color:      #3A1428;
-
   --nav-height:     64px;
-
-  /* ── Glow values (used below) ── */
   --glow-text:      0 0 12px rgba(212, 86, 126, 0.25);
   --glow-heading:   0 0 20px rgba(212, 86, 126, 0.35),
                     0 0 40px rgba(212, 86, 126, 0.15);
@@ -67,7 +50,6 @@
                     0 0 20px rgba(212, 86, 126, 0.3);
 }
 
-/* ── Reset ──────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; }
@@ -85,18 +67,15 @@ body {
 h1, h2, h3, h4 {
   font-family: 'Playfair Display', serif;
   color: var(--text-primary);
-  /* Heading glow in dark mode */
   text-shadow: var(--glow-heading);
   transition: text-shadow 0.4s ease;
 }
 
-/* Body text subtle glow in dark mode */
 p, span, li, blockquote {
   text-shadow: var(--glow-text);
   transition: text-shadow 0.4s ease;
 }
 
-/* ── Pink accents glow in dark mode ─────────────────── */
 [data-theme='dark'] .neo-btn-primary {
   box-shadow: 4px 4px 0 var(--shadow), 0 0 16px rgba(212, 86, 126, 0.4);
 }
@@ -119,7 +98,6 @@ p, span, li, blockquote {
               0 0 30px rgba(212, 86, 126, 0.12);
 }
 
-/* ── Card lift ──────────────────────────────────────── */
 .neo-card {
   background: var(--bg-card);
   border: 2px solid var(--border);
@@ -135,7 +113,6 @@ p, span, li, blockquote {
   box-shadow: 8px 12px 0 var(--shadow);
 }
 
-/* ── Button press ───────────────────────────────────── */
 .neo-btn {
   font-family: 'Space Mono', monospace;
   font-size: 11px;
@@ -175,7 +152,6 @@ p, span, li, blockquote {
 .neo-btn-secondary       { background: var(--bg-card); color: var(--text-primary); }
 .neo-btn-secondary:hover { background: var(--pink-blush); }
 
-/* ── Tag invert ─────────────────────────────────────── */
 .neo-tag {
   font-family: 'Space Mono', monospace;
   font-size: 9px;
@@ -204,7 +180,6 @@ p, span, li, blockquote {
   box-shadow:   3px 3px 0 var(--shadow);
 }
 
-/* ── Section utilities ──────────────────────────────── */
 .section-title {
   font-family: 'Playfair Display', serif;
   font-size: clamp(28px, 5vw, 42px);
