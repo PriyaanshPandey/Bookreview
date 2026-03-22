@@ -179,7 +179,7 @@
   opacity: 0.5;
   transform: rotate(12deg);
 
-  animation: stampSpin 2s linear infinite;
+  animation: stampSpin 8s linear infinite;
 }
 
 @keyframes stampSpin {
