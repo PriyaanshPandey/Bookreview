@@ -5,7 +5,6 @@ export function useCountUp(target, duration = 1800, startOnView = true) {
   const [started, setStarted] = useState(!startOnView)
   const ref                   = useRef(null)
 
-  // Intersection Observer — starts count only when stat scrolls into view
   useEffect(() => {
     if (!startOnView) return
     const el = ref.current
@@ -19,7 +18,7 @@ export function useCountUp(target, duration = 1800, startOnView = true) {
     return () => observer.disconnect()
   }, [startOnView])
 
-  // Count up animation
+
   useEffect(() => {
     if (!started) return
 
@@ -28,12 +27,12 @@ export function useCountUp(target, duration = 1800, startOnView = true) {
       if (!startTime) startTime = timestamp
       const progress = Math.min((timestamp - startTime) / duration, 1)
 
-      // Ease out cubic — fast start, slows to a stop
+     
       const eased = 1 - Math.pow(1 - progress, 3)
       setCount(Math.floor(eased * target))
 
       if (progress < 1) requestAnimationFrame(step)
-      else setCount(target) // land exactly on target
+      else setCount(target) 
     }
 
     requestAnimationFrame(step)
