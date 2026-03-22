@@ -87,8 +87,8 @@ export default function Hero() {
 
         {/* ── Animated counters ── */}
         <div className={styles.stats}>
-          <AnimatedStat target={42}  suffix="+"  label="Reviews"  duration={1600} />
-          <AnimatedStat target={12}  suffix=""   label="Genres"   duration={1200} />
+          <AnimatedStat target={10}  suffix="+"  label="Reviews"  duration={1600} />
+          <AnimatedStat target={5}  suffix=""   label="Genres"   duration={1200} />
           <AnimatedStat target={100} suffix="%"  label="Honest"   duration={2000} />
         </div>
 
