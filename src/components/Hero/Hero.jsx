@@ -10,7 +10,7 @@ const FLOATING_BOOKS = [
   { emoji: '📚', x: '90%', y: '25%', size: 28, delay: 0.3,  duration: 5.5 },
 ]
 
-// Individual animated stat
+
 function AnimatedStat({ target, suffix = '', label, duration = 1800 }) {
   const { count, ref } = useCountUp(target, duration)
   return (
@@ -85,7 +85,6 @@ export default function Hero() {
           <a href="#mood"    className="neo-btn neo-btn-secondary">🌙 Find by Mood</a>
         </div>
 
-        {/* ── Animated counters ── */}
         <div className={styles.stats}>
           <AnimatedStat target={10}  suffix="+"  label="Reviews"  duration={1600} />
           <AnimatedStat target={5}  suffix=""   label="Genres"   duration={1200} />
