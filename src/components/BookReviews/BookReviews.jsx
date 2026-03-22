@@ -19,7 +19,6 @@ export default function BookReviews() {
   const canPrev = index > 0
   const canNext = index + VISIBLE < total
 
-  // Reset index when filter/sort changes
   const handleGenre = (genre) => { setActiveGenre(genre); setIndex(0) }
   const handleSort  = (val)   => { setSortBy(val);        setIndex(0) }
 
@@ -29,7 +28,7 @@ export default function BookReviews() {
     <section id="reviews" className={styles.section}>
       <div className={styles.inner}>
 
-        {/* Header */}
+       
         <div className={styles.header}>
           <div>
             <h2 className="section-title">Book Reviews</h2>
@@ -49,7 +48,7 @@ export default function BookReviews() {
           </div>
         </div>
 
-        {/* Genre filters */}
+       
         <div className={styles.filters}>
           {ALL_GENRES.map(genre => (
             <button
@@ -60,7 +59,7 @@ export default function BookReviews() {
           ))}
         </div>
 
-        {/* Cards + carousel */}
+       
         {filtered.length > 0 ? (
           <div className={styles.carouselWrap}>
             <div className={styles.stack}>
