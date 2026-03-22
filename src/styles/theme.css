@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* ── Light ──────────────────────────────────────────── */
+[data-theme='light'] {
+  --bg-page:        #FFF0F5;
+  --bg-card:        #FFFFFF;
+  --bg-card-alt:    #FFC2D9;
+  --bg-nav:         #FFFFFF;
+  --text-primary:   #111111;
+  --text-secondary: #555555;
+  --text-muted:     #999999;
+  --border:         #111111;
+  --shadow:         #111111;
+  --pink-hot:       #FF6FA8;
+  --pink-blush:     #FFC2D9;
+  --pink-petal:     #FFF0F5;
+  --accent-grape:   #B44FFF;
+  --accent-yellow:  #FFD966;
+  --accent-mint:    #3ECFA8;
+  --accent-crimson: #E8437A;
+  --dot-color:      #e8b4c8;
+  --nav-height:     64px;
+
+  --glow-text:      none;
+  --glow-heading:   none;
+  --glow-pink:      none;
+}
+
+/* ── Dark — Deep Wine Edition ───────────────────────── */
+[data-theme='dark'] {
+  /* Backgrounds — deep wine, not black */
+  --bg-page:        #1C0A14;   /* deep burgundy-black       */
+  --bg-card:        #2B1020;   /* dark wine                 */
+  --bg-card-alt:    #3D1830;   /* mid wine                  */
+  --bg-nav:         #160810;   /* near-black wine           */
+
+  /* Text — warm not cold */
+  --text-primary:   #F2D4E0;   /* warm parchment rose       */
+  --text-secondary: #C49AAE;   /* muted dusty rose          */
+  --text-muted:     #7A4D60;   /* dim mauve                 */
+
+  /* Borders & shadows — wine-toned not pink */
+  --border:         #8B3A5A;   /* muted wine border         */
+  --shadow:         #5C1A35;   /* deep wine shadow          */
+
+  /* Pink — dialed back to muted rose */
+  --pink-hot:       #D4567E;   /* muted rose, not neon      */
+  --pink-blush:     #3A1828;   /* very dark blush           */
+  --pink-petal:     #1C0A14;   /* matches bg                */
+
+  /* Accents — slightly desaturated */
+  --accent-grape:   #9B5FCC;
+  --accent-yellow:  #C9A84C;   /* warm gold, not bright     */
+  --accent-mint:    #2FA882;
+  --accent-crimson: #C23D6A;
+
+  /* Dot grid — barely visible wine */
+  --dot-color:      #3A1428;
+
+  --nav-height:     64px;
+
+  /* ── Glow values (used below) ── */
+  --glow-text:      0 0 12px rgba(212, 86, 126, 0.25);
+  --glow-heading:   0 0 20px rgba(212, 86, 126, 0.35),
+                    0 0 40px rgba(212, 86, 126, 0.15);
+  --glow-pink:      0 0 8px  rgba(212, 86, 126, 0.6),
+                    0 0 20px rgba(212, 86, 126, 0.3);
+}
+
+/* ── Reset ──────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Space Mono', monospace;
+  background-color: var(--bg-page);
+  background-image: radial-gradient(circle, var(--dot-color) 1px, transparent 1px);
+  background-size: 18px 18px;
+  color: var(--text-primary);
+  transition: background-color 0.4s ease, color 0.4s ease;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+  color: var(--text-primary);
+  /* Heading glow in dark mode */
+  text-shadow: var(--glow-heading);
+  transition: text-shadow 0.4s ease;
+}
+
+/* Body text subtle glow in dark mode */
+p, span, li, blockquote {
+  text-shadow: var(--glow-text);
+  transition: text-shadow 0.4s ease;
+}
+
+/* ── Pink accents glow in dark mode ─────────────────── */
+[data-theme='dark'] .neo-btn-primary {
+  box-shadow: 4px 4px 0 var(--shadow), 0 0 16px rgba(212, 86, 126, 0.4);
+}
+
+[data-theme='dark'] .neo-btn-primary:hover {
+  box-shadow: 6px 6px 0 var(--shadow), 0 0 24px rgba(212, 86, 126, 0.6);
+}
+
+[data-theme='dark'] .section-divider {
+  box-shadow: 0 0 10px rgba(212, 86, 126, 0.5);
+}
+
+[data-theme='dark'] .neo-card {
+  box-shadow: 5px 5px 0 var(--shadow),
+              0 0 0 1px rgba(212, 86, 126, 0.08) inset;
+}
+
+[data-theme='dark'] .neo-card:hover {
+  box-shadow: 8px 12px 0 var(--shadow),
+              0 0 30px rgba(212, 86, 126, 0.12);
+}
+
+/* ── Card lift ──────────────────────────────────────── */
+.neo-card {
+  background: var(--bg-card);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 5px 5px 0 var(--shadow);
+  transition:
+    transform   0.22s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow  0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.neo-card:hover {
+  transform:  translateY(-6px);
+  box-shadow: 8px 12px 0 var(--shadow);
+}
+
+/* ── Button press ───────────────────────────────────── */
+.neo-btn {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border: 2px solid var(--border);
+  border-radius: 6px;
+  box-shadow: 4px 4px 0 var(--shadow);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  top: 0;
+  transition:
+    transform     0.1s ease,
+    box-shadow    0.1s ease,
+    background    0.15s ease,
+    top           0.1s ease;
+}
+
+.neo-btn:hover {
+  transform:  translateY(-2px);
+  box-shadow: 6px 6px 0 var(--shadow);
+}
+
+.neo-btn:active {
+  transform:  translateY(3px);
+  box-shadow: 1px 1px 0 var(--shadow);
+  top: 3px;
+}
+
+.neo-btn-primary         { background: var(--pink-hot); color: #fff; }
+.neo-btn-primary:hover   { filter: brightness(1.1); }
+
+.neo-btn-secondary       { background: var(--bg-card); color: var(--text-primary); }
+.neo-btn-secondary:hover { background: var(--pink-blush); }
+
+/* ── Tag invert ─────────────────────────────────────── */
+.neo-tag {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 4px 10px;
+  border: 1.5px solid var(--border);
+  border-radius: 4px;
+  box-shadow: 2px 2px 0 var(--shadow);
+  display: inline-block;
+  cursor: default;
+  transition:
+    background    0.15s ease,
+    color         0.15s ease,
+    transform     0.15s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow    0.15s ease,
+    border-color  0.15s ease;
+}
+
+.neo-tag:hover {
+  background:   var(--pink-hot);
+  color:        #fff;
+  border-color: var(--pink-hot);
+  transform:    translateY(-2px) scale(1.05);
+  box-shadow:   3px 3px 0 var(--shadow);
+}
+
+/* ── Section utilities ──────────────────────────────── */
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 5vw, 42px);
+  font-weight: 900;
+  color: var(--text-primary);
+  line-height: 1.1;
+}
+
+.section-divider {
+  width: 60px;
+  height: 4px;
+  background: var(--pink-hot);
+  border: 1.5px solid var(--border);
+  margin: 12px 0 24px;
+  transition: box-shadow 0.4s ease;
+}

@@ -1,0 +1,178 @@
+.card {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  background: var(--bg-card);
+  width: 100%;
+  min-height: 260px;
+}
+
+/* LEFT: cover — portrait style like currently reading */
+.cover {
+  width: 140px;
+  flex-shrink: 0;
+  border-right: 2px solid var(--border);
+}
+
+.coverImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.coverPlaceholder {
+  width: 100%;
+  height: 100%;
+  background: var(--pink-blush);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px;
+}
+
+.coverIcon {
+  font-size: 32px;
+}
+
+.coverGenre {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+/* RIGHT: body */
+.body {
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+
+.topRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stars {
+  font-size: 14px;
+  color: var(--accent-crimson);
+  letter-spacing: 1px;
+}
+
+.readDate {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.titleBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.author {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.genreTag {
+  background: var(--pink-blush);
+  color: var(--text-primary);
+  font-size: 8px;
+  align-self: flex-start;
+}
+
+.divider {
+  border: none;
+  border-top: 1px dashed var(--border);
+  margin: 2px 0;
+}
+
+/* Verdict — mirrors "MID-READ THOUGHTS" block */
+.verdictBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.verdictLabel {
+  font-family: 'Space Mono', monospace;
+  font-size: 8px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.verdict {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  font-style: italic;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.excerpt {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.tagRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.tag {
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 7px;
+  box-shadow: none;
+  border-color: var(--text-muted);
+}
+
+.footer {
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px dashed var(--border);
+}
+
+.footerMeta {
+  font-family: 'Space Mono', monospace;
+  font-size: 8px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}

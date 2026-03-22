@@ -1,0 +1,103 @@
+.section {
+  padding: 80px 0;
+  border-top: 2px solid var(--border);
+  position: relative;
+  transition: background-color 0.6s ease;
+  /* Subtle tint overlay via pseudo-element */
+  background-color: var(--bg-page);
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--tint, transparent);
+  transition: background 0.8s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Floating emoji layer */
+.floaterLayer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.floater {
+  position: absolute;
+  top: -40px;
+  animation: floatDown linear forwards;
+  opacity: 0;
+  user-select: none;
+}
+
+@keyframes floatDown {
+  0%   { transform: translateY(0)    rotate(0deg);   opacity: 0; }
+  10%  { opacity: 1; }
+  80%  { opacity: 0.7; }
+  100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.header { margin-bottom: 32px; }
+
+.subtitle {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Pills */
+.moodPills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+
+.pill {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 8px 16px;
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  border: 1.5px solid var(--border);
+  border-radius: 999px;
+  box-shadow: 2px 2px 0 var(--shadow);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.pill:hover {
+  background: var(--pink-blush);
+  color: var(--text-primary);
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 var(--shadow);
+}
+
+.pillActive {
+  background: var(--pink-hot) !important;
+  color: #fff !important;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  align-items: start;
+}
